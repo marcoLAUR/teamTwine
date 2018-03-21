@@ -105,7 +105,8 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 	<div id="store-area" hidden><tw-storydata name="Truth-telling with the Boss" startnode="1" creator="Twine" creator-version="2.2.1" ifid="1A7A2A5D-6DAA-4737-907C-AC6B191DFD44" zoom="0.6" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.send_statement = function(verbId, verb,objectId, name, description) {  
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.send_statement = function(verbId, verb, objectId, name, description) {  
 	var conf = {  
 		"endpoint" : "https://watershedlrs.com/api/organizations/3535/lrs/",  // Put your LRS endpoint here with a / after xapi.
 		"auth" : "Basic " + toBase64("cc7141192e1138:3b35fc14a27943") // Put your LRS username in, then a colon, and then your password. No spaces. 
@@ -136,7 +137,8 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 	// Dispatch the statement to the LRS  
 	var result = ADL.XAPIWrapper.sendStatement(statement);  
-}</script><tw-passagedata pid="1" name="Slide 1: Intro Narrative" tags="" position="100,55" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://activitystrea.ms/schema/1.0/note&#39;, &#39;note&#39;, &#39;http://activitystrea.ms/note_example&#39;, &#39;Note example&#39;, &#39;Represents a short-form text message. This object is intended primarily for use in \&quot;micro-blogging\&quot; scenarios and in systems where users are invited to publish short, often plain-text messages whose useful lifespan is generally shorter than that of an article of weblog entry. A note is similar in structure to an article, but typically does not have a title or distinct paragraphs and tends to be much shorter in length.&#39;); &lt;&lt;/script&gt;&gt;
+}
+</script><tw-passagedata pid="1" name="Slide 1: Intro Narrative" tags="" position="100,55" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/launched&#39;, &#39;launched&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;Scenario&#39;, &#39;This user has started the branching scenario&#39;); &lt;&lt;/script&gt;&gt;
 
 Two government agencies, the Directorate Department and the Contracting Department are being restructured under one unified leadership, Amita, the new CEO of the combined authority. The staff whose jobs will survive this merger are faced with many changes. New job roles, redeveloped processes, and shifting focus to the latest political priorities are expected to leave employees uncertain about the future.
 
@@ -186,31 +188,45 @@ You look at Jane and think about what to tell her.
 
 [[You: &quot;Why don&#39;t we get feedback from everyone?&quot;]]
 [[You: &quot;It didn&#39;t go well at all!&quot;]]
-[[You: &quot;I think you did a great job!&quot;]]</tw-passagedata><tw-passagedata pid="12" name="You: &quot;Why don&#39;t we get feedback from everyone?&quot;" tags="" position="1200,401" size="100,100">Jane: “I think that’s a great idea. I’m certain almost everyone really enjoyed the day and getting the additional data will help me present this to Amita. Please get that to me later today.”
+[[You: &quot;I think you did a great job!&quot;]]</tw-passagedata><tw-passagedata pid="12" name="You: &quot;Why don&#39;t we get feedback from everyone?&quot;" tags="" position="1200,401" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/selected&#39;, &#39;selected&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;Screen 1 - Good&#39;, &#39;The user selected the good path&#39;); &lt;&lt;/script&gt;&gt;
+
+Jane: “I think that’s a great idea. I’m certain almost everyone really enjoyed the day and getting the additional data will help me present this to Amita. Please get that to me later today.”
 
 
-[[Coworker Encounter]]</tw-passagedata><tw-passagedata pid="13" name="You: &quot;It didn&#39;t go well at all!&quot;" tags="" position="998,396" size="100,100">Jane looks shocked and is speechless for a moment. She contemplates if what you are saying might be right, but is almost certain that most employees did enjoy the event.
+[[Coworker Encounter]]</tw-passagedata><tw-passagedata pid="13" name="You: &quot;It didn&#39;t go well at all!&quot;" tags="" position="998,396" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/selected&#39;, &#39;selected&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;Screen 1 - Neutral&#39;, &#39;The user selected the neutral path&#39;); &lt;&lt;/script&gt;&gt;
+
+Jane looks shocked and is speechless for a moment. She contemplates if what you are saying might be right, but is almost certain that most employees did enjoy the event.
+
 Jane: “Please compile a report by the end of day with your thoughts and notes”. She then adds with severity: “I will present the report to Amita.”
 
 
-[[Coworker Encounter]]</tw-passagedata><tw-passagedata pid="14" name="You: &quot;I think you did a great job!&quot;" tags="" position="1401,400" size="100,100">Jane: I’m glad to hear that you felt things went well too! Now we can get down to business.
+[[Coworker Encounter]]</tw-passagedata><tw-passagedata pid="14" name="You: &quot;I think you did a great job!&quot;" tags="" position="1401,400" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/selected&#39;, &#39;selected&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;Screen 1 - Bad&#39;, &#39;The user selected the bad path&#39;); &lt;&lt;/script&gt;&gt;
+
+Jane: I’m glad to hear that you felt things went well too! Now we can get down to business.
 
 
-[[Jane suggests a survey]]</tw-passagedata><tw-passagedata pid="15" name="Coworker Encounter" tags="" position="1200,600" size="100,100">Your coworker stops you in the hallway visibly upset and asks you about Jane&#39;s remarks.
+[[Jane suggests a survey]]</tw-passagedata><tw-passagedata pid="15" name="Coworker Encounter" tags="" position="1200,600" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/exited&#39;, &#39;selected&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;Screen 1&#39;, &#39;The user has exited Screen 1&#39;); &lt;&lt;/script&gt;&gt;
+
+Your coworker stops you in the hallway visibly upset and asks you about Jane&#39;s remarks.
 
 Coworker: Jane thinks the away-day went well? It was a total disaster! What is happening to this organization?!
 
-
 [[You: Couldn&#39;t agree more]]
 [[You: &quot;Keep your chin up&quot;]]
-[[You: &quot;Don&#39;t worry, things work out in the end&quot;]]</tw-passagedata><tw-passagedata pid="16" name="You: &quot;Keep your chin up&quot;" tags="" position="1200,800" size="100,100">You: I’m optimistic that we can voice our concerns and start to move forward from this soon. In fact, I’m creating a survey for this very reason. It’ll be sent out by the end of the day.
+[[You: &quot;Don&#39;t worry, things work out in the end&quot;]]</tw-passagedata><tw-passagedata pid="16" name="You: &quot;Keep your chin up&quot;" tags="" position="1200,800" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/answered&#39;, &#39;answered&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;Encouragement (Good Track)&#39;, &#39;The user answered that all is good (good track)&#39;); &lt;&lt;/script&gt;&gt;
+
+You: I’m optimistic that we can voice our concerns and start to move forward from this soon. In fact, I’m creating a survey for this very reason. It’ll be sent out by the end of the day.
 Coworker: Oh thank you. I appreciate that.
 
 
-[[You create a survey]]</tw-passagedata><tw-passagedata pid="17" name="You: Couldn&#39;t agree more" tags="" position="1000,798" size="100,100">You: I know! I couldn’t agree with you more. I cannot believe Jane. This organization is going down the tubes...
+[[You create a survey]]</tw-passagedata><tw-passagedata pid="17" name="You: Couldn&#39;t agree more" tags="" position="1000,798" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/answered&#39;, &#39;answered&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;Agree - not well (Neutral)&#39;, &#39;The user agrees that it didn&#39;t go well (Neutral)&#39;); &lt;&lt;/script&gt;&gt;
+
+You: I know! I couldn’t agree with you more. I cannot believe Jane. This organization is going down the tubes...
 
 
-[[You create a survey]]</tw-passagedata><tw-passagedata pid="18" name="You: &quot;Don&#39;t worry, things work out in the end&quot;" tags="" position="1403,798" size="100,100">You: Everything will turn out fine, though! I don’t think we need to worry. Just keep doing your work.
+[[You create a survey]]</tw-passagedata><tw-passagedata pid="18" name="You: &quot;Don&#39;t worry, things work out in the end&quot;" tags="" position="1403,798" size="100,100">&lt;&lt;script&gt;&gt; setup.send_statement(&#39;http://adlnet.gov/expapi/verbs/answered&#39;, &#39;answered&#39;, &#39;http://adlnet.gov/expapi/activities/&#39;, &#39;All is good (Bad Track)&#39;, &#39;The user answered that all is good (bad track)&#39;); &lt;&lt;/script&gt;&gt;
+
+You: Everything will turn out fine, though! I don’t think we need to worry. Just keep doing your work.
 Coworker: … Well fine then...
 
 
